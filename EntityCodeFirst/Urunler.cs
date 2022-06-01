@@ -94,5 +94,33 @@ namespace EntityCodeFirst
             guncelle.ExecuteNonQuery();
             baglanti.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Giris git = new Giris();
+            git.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select *from Urunlers where UrunAd like '%" + textBox3.Text + "%'", baglanti);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select *from Urunlers order by UrunAd asc", baglanti);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+        }
     }
 }

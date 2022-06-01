@@ -79,5 +79,38 @@ namespace EntityCodeFirst
             textBox3.Text = adres;
             textBox4.Text = tel;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Giris git = new Giris();
+            git.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tedarikciler_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select *from Tedarikcilers where TedarikciAd like '%" + textBox5.Text + "%'", baglanti);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select *from Tedarikcilers order by TedarikciAd asc", baglanti);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+        }
     }
 }

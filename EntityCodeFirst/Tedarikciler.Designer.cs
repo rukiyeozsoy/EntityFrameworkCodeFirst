@@ -42,6 +42,11 @@ namespace EntityCodeFirst
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,11 +170,66 @@ namespace EntityCodeFirst
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button5.Location = new System.Drawing.Point(818, 400);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(94, 38);
+            this.button5.TabIndex = 61;
+            this.button5.Text = "Geri gel";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button7.Location = new System.Drawing.Point(807, 322);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(105, 32);
+            this.button7.TabIndex = 65;
+            this.button7.Text = "A-Z Sırala";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button6.Location = new System.Drawing.Point(807, 284);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(105, 32);
+            this.button6.TabIndex = 64;
+            this.button6.Text = "Ara";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(609, 252);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(153, 20);
+            this.label5.TabIndex = 63;
+            this.label5.Text = "Aradığınız Tedarikçi :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(768, 252);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(144, 26);
+            this.textBox5.TabIndex = 62;
+            // 
             // Tedarikciler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 450);
+            this.ClientSize = new System.Drawing.Size(936, 450);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox4);
@@ -185,6 +245,7 @@ namespace EntityCodeFirst
             this.Controls.Add(this.button1);
             this.Name = "Tedarikciler";
             this.Text = "Tedarikçiler";
+            this.Load += new System.EventHandler(this.Tedarikciler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -206,5 +267,10 @@ namespace EntityCodeFirst
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
